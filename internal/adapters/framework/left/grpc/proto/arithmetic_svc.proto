@@ -8,7 +8,7 @@ option go_package = "./pb";
 
 service ArithmeticService {
   rpc GetAddition(OperationParameters) returns (Answer) {}
-  rpc GetSubtraction(OperationParameters) returns (Answer) {}
+  rpc GetSubstraction(OperationParameters) returns (Answer) {}
   rpc GetMultiplication(OperationParameters) returns (Answer) {}
   rpc GetDivision(OperationParameters) returns (Answer) {}
 }
