@@ -1,11 +1,15 @@
 package ports
 
-// import("context")
+import (
+	"context"
+
+	"github.com/vlayco/hex-go/internal/adapters/framework/left/grpc/pb"
+)
 
 type GRPCPort interface {
 	Run()
-	GetAddition()
-	GetSubstraction()
-	GetMultiplication()
-	GetDivision()
+	GetAddition(ctx context.Context, req *pb.OperationParameters) (*pb.Answer, error)
+	GetSubstraction(ctx context.Context, req *pb.OperationParameters) (*pb.Answer, error)
+	GetMultiplication(ctx context.Context, req *pb.OperationParameters) (*pb.Answer, error)
+	GetDivision(ctx context.Context, req *pb.OperationParameters) (*pb.Answer, error)
 }
